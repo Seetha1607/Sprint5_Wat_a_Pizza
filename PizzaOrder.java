@@ -65,6 +65,7 @@ class PizzaOrder {
         System.out.println("Name of the Customer is : " + name);
         String email = input.next();
         System.out.println("Email of the Customer is : " + email);
+		input.nextLine();
 		String address = input.nextLine();
         System.out.println("Address of the Customer is : " + address);
         long phoneNumber = input.nextLong();
