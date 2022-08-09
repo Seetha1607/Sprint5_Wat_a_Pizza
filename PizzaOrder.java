@@ -77,9 +77,8 @@ import java.util.Scanner;
         Scanner input = new Scanner(System.in);
         String customerName = input.next();
         String customerEmail = input.next();
-        long phoneNumber = input.nextLong();
-        input.nextInt();
         String customerAddress = input.nextLine();
+		long phoneNumber = input.nextLong();
 
         PizzaOrder pizzaOrder = new PizzaOrder();
         pizzaOrder.displayCustomerDetails(customerName, customerEmail, phoneNumber, customerAddress);
