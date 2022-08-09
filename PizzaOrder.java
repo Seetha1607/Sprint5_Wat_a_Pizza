@@ -42,12 +42,14 @@ class PizzaOrder {
 
     public float calculateTotalBill(float totalPizzaPrice, float totalGarlicBreadPrice, float totalBeveragePrice) {
         float totalBillAmount = totalPizzaPrice + totalGarlicBreadPrice + totalBeveragePrice;
+		System.out.println("The Total Bill Amount is : " + "$" +totalBillAmount);
         return totalBillAmount;
     }
 
     public float calculateDiscountAndReturnBillAmount(float totalBillAmount) {
         float discount = (totalBillAmount * 10) / 100;
         float totalDiscountedBill = totalBillAmount - discount;
+        System.out.println("The Discounted Bill Amount is : " + "$" + discountedBill);
         return totalDiscountedBill;
     }
 
@@ -121,10 +123,8 @@ class PizzaOrder {
         }while (option != 0);
         System.out.println("----------------------------------------------------------------------------------------");
         float totalBillAmount = pizzaOrder.calculateTotalBill(totalPizzaPrice,totalGarlicBreadPrice,totalBeverageBill);
-        System.out.println("The Total Bill Amount is : " + "$" +totalBillAmount);
         if(totalBillAmount > 50){
             float discountedBill = pizzaOrder.calculateDiscountAndReturnBillAmount(totalBillAmount);
-            System.out.println("The Discounted Bill Amount is : " + "$" + discountedBill);
         }else {
             System.out.println("No Discount on Bill");
         }
