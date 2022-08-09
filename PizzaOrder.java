@@ -91,7 +91,7 @@ class PizzaOrder {
             switch(option) {
                 case 1:{
                     noOfPizza = input.nextInt();
-                    int size = input.nextInt();
+                    size = input.nextInt();
                     float priceOfPizza = pizzaOrder.getPriceOfPizzaBasedOnSize(size);
                     pizzaOrder.calculatePriceOfPizza(noOfPizza,priceOfPizza);
                     break;
