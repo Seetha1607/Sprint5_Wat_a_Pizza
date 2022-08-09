@@ -9,11 +9,11 @@ import java.util.Scanner;
 		Long phoneNumber = Long.parseLong(input.nextLine().trim());
 
         PizzaOrder pizzaOrder = new PizzaOrder();
-        pizzaOrder.displayCustomerDetails(customerName, customerEmail, phoneNumber, customerAddress);
+        pizzaOrder.displayCustomerDetails(customerName,customerEmail,phoneNumber,customerAddress);
 
         int option;
-        int noOfPizza = 0;
         int size = 0;
+		int noOfPizza = 0;
         int noOfGarlicBread = 0;
         int noOfBeverage = 0;
         float totalPizzaPrice = 0;
@@ -27,7 +27,7 @@ import java.util.Scanner;
                 case 1: {
                     noOfPizza = input.nextInt();
                     size = input.nextInt();
-                    float priceOfPizza = pizzaOrder.getPriceOfPizzaBasedOnSize(size);
+                    float Pizzaprice = pizzaOrder.getPriceOfPizzaBasedOnSize(size);
                     totalPizzaPrice = totalPizzaPrice + pizzaOrder.calculatePriceOfPizza(noOfPizza,priceOfPizza);
                     break;
                 }
@@ -50,7 +50,8 @@ import java.util.Scanner;
         float totalDiscountedBill = pizzaOrder.calculateDiscountAndReturnBillAmount(totalBillAmount);
         pizzaOrder.displayOrderDetails(noOfPizza, noOfGarlicBread, noOfBeverage, size, totalBillAmount, totalDiscountedBill);
     }
-
+ }
+ class PizzaOrder {
     void displayCustomerDetails(String customerName, String customerEmail, long phoneNumber, String customerAddress) {
         System.out.println("Name of the Customer is : " + customerName);
         System.out.println("Email of the Customer is : " + customerEmail);
@@ -69,9 +70,9 @@ import java.util.Scanner;
         if (size == 1) {
             priceOfPizza = 9.99f;
         } else if (size == 2) {
-            priceOfPizza = 5.99f;
+            priceOfPizza = 11.99f;
         } else if (size == 3) {
-            priceOfPizza = 1.99f;
+            priceOfPizza = 13.99f;
         } else {
             System.out.println("Invalid size, Enter 1,2 or 3");
             priceOfPizza = 0;
@@ -94,8 +95,7 @@ import java.util.Scanner;
         return noOfBeverage * priceOfBeverage;
     }
     public float calculateTotalBill(float totalPizzaPrice, float totalGarlicBreadPrice, float totalBeveragePrice) {
-        float totalBillAmount = totalPizzaPrice + totalGarlicBreadPrice + totalBeveragePrice;
-        return totalBillAmount;
+        return (float) totalPizzaPrice + totalGarlicBreadPrice + totalBeveragePrice;
     }
     public float calculateDiscountAndReturnBillAmount(float totalBillAmount) {
         if(totalBillAmount > 50) {
@@ -107,8 +107,7 @@ import java.util.Scanner;
             return totalBillAmount;
         }
     }
-    public void displayOrderDetails(int noOfPizza, int noOfGarlicBread, int noOfBeverage, int size, float totalBillAmount,
-                                    float totalDiscountedBillAmount) {
+    public void displayOrderDetails(int noOfPizza, int noOfGarlicBread, int noOfBeverage, int size, float totalBillAmount,float totalDiscountedBill) {
         System.out.println("----------------------------------------");
         System.out.println("Order Details  ");
         System.out.println("---------------");
@@ -118,10 +117,10 @@ import java.util.Scanner;
         System.out.println("------------------------------------------");
         System.out.println("The Total Bill Amount is : " + "$" + totalBillAmount);
         if (totalBillAmount > 50) {
-            System.out.println("The Discounted Bill Amount is : " + "$" + totalDiscountedBillAmount);
+            System.out.println("The Discounted Bill Amount is : " + "$" + totalDiscountedBill);
         } else {
             System.out.println("No Discount on Bill");
         }
 	}
-}
+
  
