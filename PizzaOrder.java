@@ -72,8 +72,10 @@ class PizzaOrder {
         System.out.println("----------------------");
         String customerName = input.next();
         String customerEmail = input.next();
-        String customerAddress = input.next();
         long phoneNumber = input.nextLong();
+        input.nextInt();
+        String customerAddress = input.nextLine();
+        pizzaOrder.displayCustomerDetails(customerName,customerEmail,phoneNumber,customerAddress);
         int option;
         int noOfPizza = 0;
         int size = 0;
@@ -88,24 +90,24 @@ class PizzaOrder {
         do{
             //Enter the option to select from the menu;
             option = input.nextInt();
-            switch(option) {
+            switch (option) {
                 case 1:{
                     noOfPizza = input.nextInt();
                     size = input.nextInt();
                     float priceOfPizza = pizzaOrder.getPriceOfPizzaBasedOnSize(size);
-                    pizzaOrder.calculatePriceOfPizza(noOfPizza,priceOfPizza);
+                    pizzaOrder.calculatePriceOfPizza(noOfPizza, priceOfPizza);
                     break;
                 }
                 case 2: {
                     noOfGarlicBread = input.nextInt();
                     float priceOfGarlicBread = pizzaOrder.getPriceOfGarlicBread();
-                    pizzaOrder.calculatePriceOfGarlicBread(noOfGarlicBread,priceOfGarlicBread);
+                    pizzaOrder.calculatePriceOfGarlicBread(noOfGarlicBread, priceOfGarlicBread);
                     break;
                 }
                 case 3: {
                     noOfBeverage = input.nextInt();
                     float priceOfBeverage = pizzaOrder.getPriceOfBeverage();
-                    pizzaOrder.calculatePriceOfBeverage(noOfBeverage,priceOfBeverage);
+                    pizzaOrder.calculatePriceOfBeverage(noOfBeverage, priceOfBeverage);
                     break;
                 }
             }//press enter 1 to order again or 0 to exit
@@ -117,12 +119,10 @@ class PizzaOrder {
         } else {
             System.out.println("No Discount on Bill");
         }
-		System.out.println("Customer Details");
-		System.out.println("----------------");
-        pizzaOrder.displayCustomerDetails(customerName,customerEmail,phoneNumber,customerAddress);
-		System.out.println("----------------------------------------");
-		System.out.println("Order Details  ");
-		System.out.println("---------------");
+        System.out.println("----------------------------------------");
+        System.out.println("Order Details  ");
+        System.out.println("---------------");
         pizzaOrder.displayOrderDetails(noOfPizza,noOfGarlicBread,noOfBeverage,size,totalBillAmount,totalDiscountedBillAmount);
+        input.close();
     }
 }
