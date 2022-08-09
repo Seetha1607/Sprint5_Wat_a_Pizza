@@ -27,7 +27,7 @@ import java.util.Scanner;
                 case 1: {
                     noOfPizza = input.nextInt();
                     size = input.nextInt();
-                    float Pizzaprice = pizzaOrder.getPriceOfPizzaBasedOnSize(size);
+                    float priceOfPizza = pizzaOrder.getPriceOfPizzaBasedOnSize(size);
                     totalPizzaPrice = totalPizzaPrice + pizzaOrder.calculatePriceOfPizza(noOfPizza,priceOfPizza);
                     break;
                 }
