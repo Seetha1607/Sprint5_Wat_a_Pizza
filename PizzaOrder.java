@@ -29,8 +29,6 @@ class PizzaOrder {
     }
 
     public float calculatePriceOfPizza(int noOfPizza, float priceOfPizza) {
-        float totalPizzaPrice = (noOfPizza * priceOfPizza) + totalPizzaPrice;
-        System.out.println("")
         return noOfPizza * priceOfPizza;
     }
 
