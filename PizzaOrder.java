@@ -1,6 +1,56 @@
 import java.util.Scanner;
 
  public class PizzaOrder {
+	  public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        String customerName = input.next();
+        String customerEmail = input.next();
+        String customerAddress = input.next();
+		Long phoneNumber = Long.parseLong(input.nextLine().trim());
+
+        PizzaOrder pizzaOrder = new PizzaOrder();
+        pizzaOrder.displayCustomerDetails(customerName, customerEmail, phoneNumber, customerAddress);
+
+        int option;
+        int noOfPizza = 0;
+        int size = 0;
+        int noOfGarlicBread = 0;
+        int noOfBeverage = 0;
+        float totalPizzaPrice = 0;
+        float totalBeveragePrice = 0;
+        float totalGarlicBreadPrice = 0;
+
+        do {
+            //Enter the option to select from the menu;
+            option = input.nextInt();
+            switch (option) {
+                case 1: {
+                    noOfPizza = input.nextInt();
+                    size = input.nextInt();
+                    float priceOfPizza = pizzaOrder.getPriceOfPizzaBasedOnSize(size);
+                    totalPizzaPrice = totalPizzaPrice + pizzaOrder.calculatePriceOfPizza(noOfPizza,priceOfPizza);
+                    break;
+                }
+                case 2: {
+                    noOfGarlicBread = input.nextInt();
+                    float priceOfGarlicBread = pizzaOrder.getPriceOfGarlicBread();
+                    totalGarlicBreadPrice = totalGarlicBreadPrice + pizzaOrder.calculatePriceOfGarlicBread(noOfGarlicBread, priceOfGarlicBread);
+                    break;
+                }
+                case 3: {
+                    noOfBeverage = input.nextInt();
+                    float priceOfBeverage = pizzaOrder.getPriceOfBeverage();
+                    totalBeveragePrice = totalBeveragePrice + pizzaOrder.calculatePriceOfBeverage(noOfBeverage, priceOfBeverage);
+                    break;
+                }
+            }//press enter 1 to order again or 0 to exit
+            // option = input.nextInt();
+        } while (option != 0);
+        float totalBillAmount = pizzaOrder.calculateTotalBill(totalPizzaPrice, totalGarlicBreadPrice, totalBeveragePrice);
+        float totalDiscountedBill = pizzaOrder.calculateDiscountAndReturnBillAmount(totalBillAmount);
+        pizzaOrder.displayOrderDetails(noOfPizza, noOfGarlicBread, noOfBeverage, size, totalBillAmount, totalDiscountedBill);
+    }
+
     void displayCustomerDetails(String customerName, String customerEmail, long phoneNumber, String customerAddress) {
         System.out.println("Name of the Customer is : " + customerName);
         System.out.println("Email of the Customer is : " + customerEmail);
@@ -72,54 +122,6 @@ import java.util.Scanner;
         } else {
             System.out.println("No Discount on Bill");
         }
-    }
-    public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
-        String customerName = input.next();
-        String customerEmail = input.next();
-        String customerAddress = input.next();
-		Long phoneNumber = Long.parseLong(input.nextLine().trim());
-
-        PizzaOrder pizzaOrder = new PizzaOrder();
-        pizzaOrder.displayCustomerDetails(customerName, customerEmail, phoneNumber, customerAddress);
-
-        int option;
-        int noOfPizza = 0;
-        int size = 0;
-        int noOfGarlicBread = 0;
-        int noOfBeverage = 0;
-        float totalPizzaPrice = 0;
-        float totalBeveragePrice = 0;
-        float totalGarlicBreadPrice = 0;
-
-        do {
-            //Enter the option to select from the menu;
-            option = input.nextInt();
-            switch (option) {
-                case 1: {
-                    noOfPizza = input.nextInt();
-                    size = input.nextInt();
-                    float priceOfPizza = pizzaOrder.getPriceOfPizzaBasedOnSize(size);
-                    totalPizzaPrice = totalPizzaPrice + pizzaOrder.calculatePriceOfPizza(noOfPizza,priceOfPizza);
-                    break;
-                }
-                case 2: {
-                    noOfGarlicBread = input.nextInt();
-                    float priceOfGarlicBread = pizzaOrder.getPriceOfGarlicBread();
-                    totalGarlicBreadPrice = totalGarlicBreadPrice + pizzaOrder.calculatePriceOfGarlicBread(noOfGarlicBread, priceOfGarlicBread);
-                    break;
-                }
-                case 3: {
-                    noOfBeverage = input.nextInt();
-                    float priceOfBeverage = pizzaOrder.getPriceOfBeverage();
-                    totalBeveragePrice = totalBeveragePrice + pizzaOrder.calculatePriceOfBeverage(noOfBeverage, priceOfBeverage);
-                    break;
-                }
-            }//press enter 1 to order again or 0 to exit
-            // option = input.nextInt();
-        } while (option != 0);
-        float totalBillAmount = pizzaOrder.calculateTotalBill(totalPizzaPrice, totalGarlicBreadPrice, totalBeveragePrice);
-        float totalDiscountedBill = pizzaOrder.calculateDiscountAndReturnBillAmount(totalBillAmount);
-        pizzaOrder.displayOrderDetails(noOfPizza, noOfGarlicBread, noOfBeverage, size, totalBillAmount, totalDiscountedBill);
-    }
+	}
 }
+ 
