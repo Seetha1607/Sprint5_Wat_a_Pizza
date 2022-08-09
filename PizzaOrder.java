@@ -42,7 +42,7 @@ class PizzaOrder {
 
     public float calculateTotalBill(float totalPizzaPrice, float totalGarlicBreadPrice, float totalBeveragePrice) {
         float totalBillAmount = totalPizzaPrice + totalGarlicBreadPrice + totalBeveragePrice;
-        System.out.println("The Total Bill Amount is : " + "$" +totalBillAmount);
+        System.out.println("The Total Bill Amount is : " + "$" + totalBillAmount);
         return totalBillAmount;
     }
 
@@ -65,11 +65,10 @@ class PizzaOrder {
         System.out.println("Name of the Customer is : " + name);
         String email = input.next();
         System.out.println("Email of the Customer is : " + email);
+		String address = input.next();
+        System.out.println("Address of the Customer is : " + address);
         long phoneNumber = input.nextLong();
         System.out.println("Contact No of the Customer is : " + phoneNumber);
-        input.nextLine();
-        String address = input.nextLine();
-        System.out.println("Address of the Customer is : " + address);
         System.out.println("-----------------------------------------------");
         System.out.println("Order Details ");
         System.out.println("----------------");
