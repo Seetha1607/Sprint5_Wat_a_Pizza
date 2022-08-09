@@ -42,14 +42,14 @@ class PizzaOrder {
 
     public float calculateTotalBill(float totalPizzaPrice, float totalGarlicBreadPrice, float totalBeveragePrice) {
         float totalBillAmount = totalPizzaPrice + totalGarlicBreadPrice + totalBeveragePrice;
-		System.out.println("The Total Bill Amount is : " + "$" +totalBillAmount);
+        System.out.println("The Total Bill Amount is : " + "$" +totalBillAmount);
         return totalBillAmount;
     }
 
     public float calculateDiscountAndReturnBillAmount(float totalBillAmount) {
         float discount = (totalBillAmount * 10) / 100;
         float totalDiscountedBill = totalBillAmount - discount;
-        System.out.println("The Discounted Bill Amount is : " + "$" + discountedBill);
+        System.out.println("The Discounted Bill Amount is : " + "$" + totalDiscountedBill);
         return totalDiscountedBill;
     }
 
