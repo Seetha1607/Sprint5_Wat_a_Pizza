@@ -50,8 +50,7 @@ import java.util.Scanner;
         float totalDiscountedBill = pizzaOrder.calculateDiscountAndReturnBillAmount(totalBillAmount);
         pizzaOrder.displayOrderDetails(noOfPizza, noOfGarlicBread, noOfBeverage, size, totalBillAmount, totalDiscountedBill);
     }
- }
- class PizzaOrder {
+
     void displayCustomerDetails(String customerName, String customerEmail, long phoneNumber, String customerAddress) {
         System.out.println("Name of the Customer is : " + customerName);
         System.out.println("Email of the Customer is : " + customerEmail);
@@ -122,5 +121,4 @@ import java.util.Scanner;
             System.out.println("No Discount on Bill");
         }
 	}
-
- 
+ }
