@@ -68,7 +68,7 @@ class PizzaOrder {
         long phoneNumber = input.nextLong();
         System.out.println("Contact No of the Customer is : " + phoneNumber);
         input.nextLine();
-        String address = input.next();
+        String address = input.nextLine();
         System.out.println("Address of the Customer is : " + address);
         System.out.println("-----------------------------------------------");
         System.out.println("Order Details ");
