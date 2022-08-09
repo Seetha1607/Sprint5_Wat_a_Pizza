@@ -1,4 +1,3 @@
-package com.niit.jdp;
 import java.util.Scanner;
 class PizzaOrder {
     void displayCustomerDetails(String name, String email, long phoneNumber, String address) {
