@@ -3,8 +3,8 @@ public class PizzaOrder {
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		String name = input.next();
-		String email = input.nextLine();
-		String address = input.next();
+		String email = input.next();
+		String address = input.nextLine();
 		input.nextLine();
 		long phoneNo = input.nextLong();
 		
