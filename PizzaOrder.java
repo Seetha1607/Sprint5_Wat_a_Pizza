@@ -112,7 +112,7 @@ class PizzaBill{
 		System.out.println("-----------------------------------------------");
 		System.out.println("The Total Bill Amount is          : " + "$" + totalBillAmount);
 		if(totalBillAmount > 50){
-			System.out.println("The Discounted Bill Amount is   : " + "$" + discountedBillAmount);
+			System.out.println("The Discounted Bill Amount is : " + "$" + discountedBillAmount);
 		} else {
 			System.out.println("No Discount on bill");
 		}
