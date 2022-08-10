@@ -12,7 +12,7 @@ class PizzaOrder {
 		PizzaBill pizzaBill = new PizzaBill();
 		pizzaBill.displayCustomerDetails(name,email,phoneNo,address);
 
-		int option;
+		int option = 0;
 		int size = 0;
 		float totalPizzaPrice = 0;
 		float totalGarlicBreadPrice = 0;
