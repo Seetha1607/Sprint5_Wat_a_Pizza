@@ -100,7 +100,7 @@ class PizzaBill{
 	}
 	public void displayOrderDetails(int noOfPizza, int noOfGarlicBread, int noOfGarlicBread, int size, float totalBillAmount, float discountedBillAmount){
 		System.out.println("Order Details");
-		System.out.println("-------------")
+		System.out.println("-------------");
 		System.out.println("The number of pizzas ordered : " + noOfPizza);
 		System.out.println("The number of garlic bread ordered : " + noOfGarlicBread);
 		System.out.println("The number of beverages ordered : " + noOfBeverage);
@@ -112,6 +112,4 @@ class PizzaBill{
 			System.out.println("No discount on bill");
 		}
 	}
-}
-
 }
