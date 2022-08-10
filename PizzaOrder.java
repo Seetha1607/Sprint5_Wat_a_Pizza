@@ -90,7 +90,7 @@ class PizzaBill{
 		return beveragePrice * noOfBeverage;
 	}
 	public float calculateTotalBill(float totalPizzaPrice, float totalGarlicBreadPrice, float totalBeveragePrice){
-		return totalPizzaPrice + totalGarlicBreadPrice + totalGarlicBreadPrice;
+		return totalPizzaPrice + totalGarlicBreadPrice + totalBeveragePrice;
 	}
 	public float calculateDiscountAndReturnBillAmount(float totalBillAmount){
 		if(totalBillAmount > 50){
