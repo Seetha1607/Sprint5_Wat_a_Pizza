@@ -5,7 +5,7 @@ public class PizzaOrder {
 		String name = input.next();
 		String email = input.next();
 		String address = input.nextLine();
-		Long phoneNo = input.nextLong();
+		long phoneNo = input.nextLong();
 		
 		PizzaBill pizzaBill = new PizzaBill();
 		pizzaBill.displayCustomerDetails(name,email,phoneNo,address);
@@ -44,7 +44,7 @@ public class PizzaOrder {
 }
 class PizzaBill{
 	float pizzaPrice = 0;
-	void displayCustomerDetails(String name, String email, Long phoneNo, String address){
+	void displayCustomerDetails(String name, String email, long phoneNo, String address){
 		System.out.println("Customer Details");
 		System.out.println("------------------");
 		System.out.println("Name of the Customer is : " + name);
