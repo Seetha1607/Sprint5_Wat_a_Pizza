@@ -44,7 +44,7 @@ public class PizzaOrder {
 }
 class PizzaBill{
 	float pizzaPrice = 0;
-	void displayCustomerDetails(String name, String email, long phoneNo, String address){
+	void displayCustomerDetails(String name, String email, Long phoneNo, String address){
 		System.out.println("Customer Details");
 		System.out.println("------------------");
 		System.out.println("Name of the Customer is : " + name);
