@@ -36,7 +36,9 @@ public class PizzaOrder {
 	public float calculateTotalBill(float totalPizzaPrice, float totalGarlicBreadPrice, float totalBeveragePrice){
 		return totalPizzaPrice + totalGarlicBreadPrice + totalGarlicBreadPrice;
 	}
-	public float 
+	public float calculateDiscountAndReturnBillAmount(float totalBillAmount){
+		if(tot)
+	}
 
 
 }
