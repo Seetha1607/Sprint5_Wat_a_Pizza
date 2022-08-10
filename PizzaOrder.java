@@ -27,15 +27,15 @@ class PizzaOrder {
 				size = input.nextInt();
 				noOfPizza = input.nextInt();
 				float pizzaPrice = pizzaBill.getPriceOfPizzaBasedOnSize(size);
-				totalPizzaPrice = pizzaBill.calculatePriceOfPizza(noOfPizza,pizzaPrice);
+				totalPizzaPrice = totalPizzaPrice + pizzaBill.calculatePriceOfPizza(noOfPizza,pizzaPrice);
 			} else if (option == 2){
 				noOfGarlicBread = input.nextInt();
 				float garlicBreadPrice = pizzaBill.getPriceOfGarlicBread();
-				totalGarlicBreadPrice = pizzaBill.calculatePriceOfGarlicBread(noOfGarlicBread,garlicBreadPrice);
+				totalGarlicBreadPrice = totalGarlicBreadPrice + pizzaBill.calculatePriceOfGarlicBread(noOfGarlicBread,garlicBreadPrice);
 			} else if (option == 3){
 				noOfBeverage = input.nextInt();
 				float beveragePrice = pizzaBill.getPriceOfGarlicBread();
-				totalBeveragePrice = pizzaBill.calculatePriceOfBeverage(noOfBeverage,beveragePrice);
+				totalBeveragePrice = totalBeveragePrice + pizzaBill.calculatePriceOfBeverage(noOfBeverage,beveragePrice);
 			}
 			option = input.nextInt();
 		} while (option != 0);
