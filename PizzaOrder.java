@@ -47,8 +47,8 @@ class PizzaBill{
 	void displayCustomerDetails(String name, String email, long phoneNo, String address){
 		System.out.println("Name of the Customer is : " + name);
 		System.out.println("Email of the Customer is : " + email);
-		System.out.println("Contact no of the Customer is " + phoneNo);
-		System.out.println("Address of the Customer is " + address);
+		System.out.println("Contact No of the Customer is : " + phoneNo);
+		System.out.println("Address of the Customer is : " + address);
 	}
 	void displayMenu(){
 		System.out.println("Select the items to order");
