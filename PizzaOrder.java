@@ -4,7 +4,7 @@ public class PizzaOrder {
 		Scanner input = new Scanner(System.in);
 		String name = input.next();
 		String email = input.next();
-		String address = input.next();
+		String address = input.nextLine();
 		Long phoneNo = Long.parseLong(input.next().trim());
 		
 		PizzaBill pizzaBill = new PizzaBill();
