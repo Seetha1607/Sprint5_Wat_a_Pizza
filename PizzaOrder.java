@@ -33,7 +33,10 @@ public class PizzaOrder {
 	public float calculatePriceOfBeverage(int noOfBeverage, float beveragePrice){
 		return beveragePrice * noOfBeverage;
 	}
-	public float calculateTotalBill(float totalPizzaPrice, float )
+	public float calculateTotalBill(float totalPizzaPrice, float totalGarlicBreadPrice, float totalBeveragePrice){
+		return totalPizzaPrice + totalGarlicBreadPrice + totalGarlicBreadPrice;
+	}
+	public float 
 
 
 }
