@@ -3,7 +3,7 @@ public class PizzaOrder {
 	public static void main(String[] args){
 		Scanner input = new Scanner(System.in);
 		String name = input.next();
-		Sting email = input.next();
+		String email = input.next();
 		String address = input.next();
 		long phoneNo = input.nextLong();
 
@@ -98,7 +98,7 @@ class PizzaBill{
 			return totalBillAmount;
 		}
 	}
-	public void displayOrderDetails(int noOfPizza, int noOfGarlicBread, int noOfGarlicBread, int size, float totalBillAmount, float discountedBillAmount){
+	public void displayOrderDetails(int noOfPizza, int noOfGarlicBread, int noOfBeverage, int size, float totalBillAmount, float discountedBillAmount){
 		System.out.println("Order Details");
 		System.out.println("-------------");
 		System.out.println("The number of pizzas ordered : " + noOfPizza);
