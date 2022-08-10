@@ -69,7 +69,7 @@ class PizzaBill{
 		} else if (size == 3){
 			pizzaPrice = 13.99f;
 		}else{
-			System.out.println("Invalid size, enter 1,2 or 3");
+			System.out.println("Invalid size, enter 1, 2 or 3");
 			pizzaPrice = 0;
 		}
 		return pizzaPrice;
@@ -95,7 +95,7 @@ class PizzaBill{
 	public float calculateDiscountAndReturnBillAmount(float totalBillAmount){
 		if(totalBillAmount > 50){
 			float discount = (totalBillAmount * 10)/100;
-			float discountedBillAmount = totalBillAmount -discount;
+			float discountedBillAmount = totalBillAmount - discount;
 			return discountedBillAmount; 
 		} else {
 			return totalBillAmount;
@@ -105,9 +105,9 @@ class PizzaBill{
 		System.out.println("------------------------------------");
 		System.out.println("Order Details");
 		System.out.println("-------------");
-		System.out.println("The number of pizzas ordered : " + noOfPizza);
-		System.out.println("The number of garlic bread ordered : " + noOfGarlicBread);
-		System.out.println("The number of beverages ordered : " + noOfBeverage);
+		System.out.println("The number of pizzas ordered        :" + noOfPizza);
+		System.out.println("The number of garlic bread ordered  :" + noOfGarlicBread);
+		System.out.println("The number of beverages ordered     :" + noOfBeverage);
 		System.out.println("-----------------------------------------");
 		System.out.println("The Total Bill Amount is : " + "$" + totalBillAmount);
 		if(totalBillAmount > 50){
