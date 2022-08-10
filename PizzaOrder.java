@@ -108,7 +108,7 @@ class PizzaBill{
 		System.out.println("The number of pizzas ordered        : " + noOfPizza);
 		System.out.println("The number of garlic bread ordered  : " + noOfGarlicBread);
 		System.out.println("The number of beverages ordered     : " + noOfBeverage);
-		System.out.println("-----------------------------------------");
+		System.out.println("-----------------------------------------------");
 		System.out.println("The Total Bill Amount is          : " + "$" + totalBillAmount);
 		if(totalBillAmount > 50){
 			System.out.println("The Discounted Bill Amount is : " + "$" + discountedBillAmount);
