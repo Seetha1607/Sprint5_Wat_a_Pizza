@@ -5,7 +5,7 @@ public class PizzaOrder {
 		String name = input.next();
 		String email = input.next();
 		String address = input.next();
-		Long phoneNo = input.nextLong();
+		long phoneNo = input.next();
 		
 		PizzaBill pizzaBill = new PizzaBill();
 		pizzaBill.displayCustomerDetails(name,email,phoneNo,address);
