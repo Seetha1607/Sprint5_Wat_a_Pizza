@@ -7,7 +7,7 @@ public class PizzaOrder {
 		long phoneNo = input.nextLong();
 		input.nextLine();
 		String address = input.nextLine();
-		
+
 		PizzaBill pizzaBill = new PizzaBill();
 		pizzaBill.displayCustomerDetails(name,email,phoneNo,address);
 
@@ -26,15 +26,15 @@ public class PizzaOrder {
 				size = input.nextInt();
 				noOfPizza = input.nextInt();
 				float pizzaPrice = pizzaBill.getPriceOfPizzaBasedOnSize(size);
-				totalPizzaPrice = totalPizzaPrice + pizzaBill.calculatePriceOfPizza(noOfPizza,pizzaPrice);
+				totalPizzaPrice = pizzaBill.calculatePriceOfPizza(noOfPizza,pizzaPrice);
 			} else if (option == 2){
 				noOfGarlicBread = input.nextInt();
 				float garlicBreadPrice = pizzaBill.getPriceOfGarlicBread();
-				totalGarlicBreadPrice = totalGarlicBreadPrice + pizzaBill.calculatePriceOfGarlicBread(noOfGarlicBread,garlicBreadPrice);
+				totalGarlicBreadPrice = pizzaBill.calculatePriceOfGarlicBread(noOfGarlicBread,garlicBreadPrice);
 			} else if (option == 3){
 				noOfBeverage = input.nextInt();
 				float beveragePrice = pizzaBill.getPriceOfGarlicBread();
-				totalBeveragePrice = totalBeveragePrice + pizzaBill.calculatePriceOfBeverage(noOfBeverage,beveragePrice);
+				totalBeveragePrice = pizzaBill.calculatePriceOfBeverage(noOfBeverage,beveragePrice);
 			}
 			option = input.nextInt();
 		} while (option != 0);
