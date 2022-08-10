@@ -45,6 +45,8 @@ public class PizzaOrder {
 class PizzaBill{
 	float pizzaPrice = 0;
 	void displayCustomerDetails(String name, String email, long phoneNo, String address){
+		System.out.println("Customer Details");
+		System.out.println("------------------");
 		System.out.println("Name of the Customer is : " + name);
 		System.out.println("Email of the Customer is : " + email);
 		System.out.println("Contact No of the Customer is : " + phoneNo);
@@ -99,17 +101,18 @@ class PizzaBill{
 		}
 	}
 	public void displayOrderDetails(int noOfPizza, int noOfGarlicBread, int noOfBeverage, int size, float totalBillAmount, float discountedBillAmount){
+		System.out.println("------------------------------------");
 		System.out.println("Order Details");
 		System.out.println("-------------");
 		System.out.println("The number of pizzas ordered : " + noOfPizza);
 		System.out.println("The number of garlic bread ordered : " + noOfGarlicBread);
 		System.out.println("The number of beverages ordered : " + noOfBeverage);
 		System.out.println("-----------------------------------------");
-		System.out.println("The total Bill Amount is : " + totalBillAmount);
+		System.out.println("The Total Bill Amount is : " + "$" + totalBillAmount);
 		if(totalBillAmount > 50){
-			System.out.println("The Discounted Bill Amount is : " + discountedBillAmount);
+			System.out.println("The Discounted Bill Amount is : " + "$" + discountedBillAmount);
 		} else {
-			System.out.println("No discount on bill");
+			System.out.println("No Discount on bill");
 		}
 	}
 }
